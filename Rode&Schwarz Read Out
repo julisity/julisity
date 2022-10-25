@@ -1,4 +1,4 @@
-#only trying out to read the values of a R&S®ZNB40. lot of unessscecry code and performace diminishing code.
+#only trying out to read the values of a R&S®ZNB20. lot of unessscecry code and performace diminishing code.
 #again, its only a try, but it works for me.
 #hook up the R&S®ZNB40 to the CAT port on your pc and it should work if the IP adress (see variable instr)
 #the correct IP adress can be read from your network analyzer
