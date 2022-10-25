@@ -4,6 +4,9 @@
 #the correct IP adress can be read from your network analyzer
 #install the module RsInstrument using pip
 
+#the programm creates a touchstone file with the 4 s parameters (s2p) and a csv file. 
+#it also plots the results if you enable it, so install matplotlib using pip 
+
 import sys
 import time
 import matplotlib.pyplot as plt
@@ -152,7 +155,7 @@ while True:
         print(f"s22rPt2Imag{s22ResultsPt2i}")
         print()
         break
-    # --------------------- renaming or false false inputs-------------------------
+    # --------------------- renaming or false inputs-------------------------
     elif adj == "n":
         q = input(f"\nAlright, let's edit. Please type 1 for Start Freq in MHz; 2 for End Freq in MHz; 3 for Number of "
                   f"Measurement Points; \n4 for Output Power Level;5 for Bandwidth in Hz); 6 for Plot the data; "
@@ -207,7 +210,7 @@ while True:
 
 print("I'm done with measuring!")
 
-# ------------------------------plotting the results if the use wants every single graph plotted---------------
+# ------------------------------plotting the results if the user wants every single graph plotted---------------
 # configuring the x-axis: The Measured Frequencies
 x = np.linspace(startFreq, endFreq, measCount)
 
@@ -258,7 +261,7 @@ if csvFileOnOff:
 
     df = pd.DataFrame(data, columns=['Frequencies', 's11Pt1Real', 's11Pt2Imag', 's12Pt1Real', 's12Pt2Imag',
                                      's21Pt1Real', 's21Pt2Imag', 's22Pt1Real', 's22Pt2Imag'])
-    df.to_csv(r'C:\Users\stu-jth\Documents\Tests\Tests\test1.csv', index=False, header=True)
+    df.to_csv(r'C:\Users\xxx\Documents\Tests\Tests\test1.csv', index=False, header=True)
     print(df)
 else:
     if plotOnOff:
